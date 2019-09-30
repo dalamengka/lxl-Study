@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    #mydiv{
+        width: 200px;
+        height: 200px;
+        background-color: deeppink;
+        transition: 0.5s;
+    }
+    </style>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <script>
+        var mydiv=document.getElementById('mydiv');
+        var d=0,s=0,q=0,w=0;
+        document.onkeydown=function(e){
+            switch(e.keyCode){
+                case 39:mydiv.style.marginLeft=d*20+'px';d++;break;
+                case 40:mydiv.style.marginTop=s*20+'px';s++;break;
+                case 37:mydiv.style.marginRight=q*20+'px';q++;break;
+                case 38:mydiv.style.marginBottom=w*20+'px';w++;break;
+            }
+        }
+        document.onkeyup=function(e){
+            alert('抬起了');
+        }
+    </script>
+</body>
+</html>

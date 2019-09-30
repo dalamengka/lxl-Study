@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>人生时间判断</title>
+</head>
+<body>
+    <button id="btn">点我看人生</button>
+    <script>
+        var c = Number(prompt('请输入你的年龄'));
+        var a =c.value;
+        var btn = document.getElementById('btn');
+        var b = function(){
+        if(12>a>=0){alert('你还太年轻小朋友');}
+        else if(16>a>=12){alert('青少年');}
+        else if(30>a>=16){alert('成年人');}
+        else if(60>a>=30){alert('中年人');}
+        else if(100>a>=60){alert('老年人');}
+        else{
+            alert('抱歉您已经死了');
+        }}
+        btn.onclick=b;
+    </script>
+</body>
+</html>

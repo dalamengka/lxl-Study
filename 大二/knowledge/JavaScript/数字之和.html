@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>数字求和</title>
+    <style>
+        body{
+            color: greenyellow;
+            font-size: 18px;
+        }
+        #nmsla{
+            border: 2px solid deeppink;
+            width: 50px;
+            height: 20px;
+            color: blue;
+            font-size: 16px;
+            border-radius: 50%;
+        }
+        #nmslb{
+            border: 2px solid deepskyblue;
+            width: 50px;
+            height: 20px;
+            color: blueviolet;
+            font-size: 16px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:alert('点我干骂呀');" id="jieguo"></a>←结果在这里<br>
+    <input type="text" id="nmsla">+<input type="text" id="nmslb">
+    <button id="btn">点击计算</button>
+    <script>
+        var jie = document.getElementById('jieguo');
+        var nmsla = document.getElementById('nmsla');
+        var nmslb = document.getElementById('nmslb');
+        btn.onclick = function(){
+            var a = Number(nmsla.value);
+            var b = Number(nmslb.value);
+            var c = parseInt(a+b);
+            jie.innerHTML=c;
+            if(isNaN(c)){
+                alert('请输入数字');
+            }
+            else{}
+        }
+    </script>
+</body>
+</html>

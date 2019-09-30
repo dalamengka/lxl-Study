@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>三八妇女节的判断</title>
+</head>
+<body>
+    <input type="date" id="d">
+    <script>
+        var d = document.getElementById('d');
+        var ns = confirm('男神请点击确定');
+        // console.log(nw);
+        d.oninput = function(){
+            // alert(d.value);
+        d.value == '2019-03-08'&& ns ?alert('今日女士打五折'):alert('今日全款没折扣');
+        // console.log(d.value);
+    }
+    </script>
+</body>
+</html>

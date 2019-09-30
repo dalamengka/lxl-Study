@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>三目运算符</title>
+    <style>
+        #nmsl{
+         width: 100px;
+        height: 100px;
+        }
+    .red{
+        background-color: red;
+    }
+    .blue{
+        background-color:blue;
+    }
+    </style>
+</head>
+<body>
+    <div class="red" id="nmsl"></div>
+    <script>
+        var a = 10;
+        var b = 20;
+        var nmsl = document.getElementById('nmsl');
+        //你说的对么?对(执行的事件):错(执行的事件)
+        a<b?alert('对'):alert('错');
+        nmsl.onclick=function(){
+            nmsl.className == 'red'?nmsl.className='blue':nmsl.className='red';
+            console.log(nmsl.className);
+        }
+    </script>
+</body>
+</html>

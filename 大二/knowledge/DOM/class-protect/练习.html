@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    div{
+        width: 200px;
+        height: 200px;
+    }
+    .a{
+        background-color: red;
+
+    }
+    .b{
+        background-color: deepskyblue;
+    }
+    </style>
+</head>
+<body>
+    <div id="o" class="a"></div>
+    <button id="btn">点击变蓝</button>
+    <script>
+        var btn = document.getElementById('btn');
+        var o = document.getElementById('o');
+        // console.log(o);
+        btn.onclick=function(){
+            o.className = 'b';
+        }
+        
+    </script>
+</body>
+</html>

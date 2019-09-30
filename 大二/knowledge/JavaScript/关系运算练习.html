@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nmsl" placeholder="请输入你的年龄"><button id="btn">点击查看优惠</button>
+    <script>
+        var nmsl = document.getElementById('nmsl');
+        var btn = document.getElementById('btn');
+        var a = nmsl.value;
+        btn.onclick=function(){
+        if(a<=6){
+            alert('您这顿饭免单哦小屁孩~');
+        }else if(a>=80){
+            alert('您这顿饭五折哦老头/太太');
+        }else if(80>a>6){
+            alert('请付全款(没有优惠哦亲~)');
+        }}
+    </script>
+</body>
+</html>

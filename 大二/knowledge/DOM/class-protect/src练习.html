@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    img{
+        width: 300px;
+        border:1px solid deeppink;
+    }
+    </style>
+</head>
+<body>
+    <img src="wuyu.gif" alt="">
+    <br>
+    <img src="baba.jpg" alt="">
+    <script>
+        var imgs = document.getElementsByTagName('img');
+        var img1 = imgs[0].getAttribute('src');
+        var img2 = imgs[1].getAttribute('src');
+    </script>
+</body>
+</html>

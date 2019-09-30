@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    #mydiv{
+        width: 200px;
+        height: 220px;
+        border: 1px solid deeppink;
+    }
+    button{
+        width: 40%;
+        height: 100px;
+        background-color: #fff;
+    }
+    </style>
+</head>
+<body>
+    <div id="mydiv">
+        <button id="btn">按钮</button>
+        <button id="btn2">按钮</button>
+    </div>
+    <script>
+        var btn = document.getElementById('btn');
+        var btn2 = document.getElementById('btn2');
+        var mydiv = document.getElementById('mydiv');
+        // btn.addEventListener('onmouseup',q,false);
+        btn.addEventListener('click',a,false);
+        btn2.addEventListener('click',a,false);
+        // btn2.addEventListener('onmouseup',q,false);
+        btn.addEventListener('dblclick',b,false);
+        btn2.addEventListener('dblclick',c,false);
+        function a(){
+            mydiv.style.backgroundColor='gray';
+        }
+        // function q(){
+        //     this.style.backgroundColor='none';
+        // }
+        function b(){
+            alert('欢迎打开QQ!');
+        }
+        function c(){
+            alert('欢迎打开微信!');
+        }
+    </script>
+</body>
+</html>

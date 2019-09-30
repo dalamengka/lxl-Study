@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>检票进站</title>
+    <style>
+    #pm{
+        width:200px;
+        height: 200px;
+        background-color: aqua;
+        text-align: center;
+        line-height: 200px;
+    }
+    </style>
+</head>
+<body>
+    <div id="pm">点我</div>
+    <script>
+        var pm = document.getElementById('pm');
+        pm.onclick=function(){
+            // var 身份证=confirm('您是否拥有身份证');
+            // var 火车票=confirm('您是否有火车票');
+            // 身份证||火车票?alert('请进站'):alert('抱歉您不能进站');
+            // confirm('您是否拥有身份证')||confirm('您是否有火车票')?alert('请进站'):alert('抱歉您不能进站');
+            alert(confirm('你是否有身份证')||confirm('你是否有高铁票')?'请进站':'请滚蛋');
+        }
+    </script>
+</body>
+</html>

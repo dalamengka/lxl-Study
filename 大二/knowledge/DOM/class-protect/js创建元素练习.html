@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    li{
+        display: block;
+    }
+    div>div{
+        border: 1px solid deeppink;
+        width: 50px;
+        height: 50px;
+        color: #fff;
+        position: absolute;
+        opacity: 1;
+        background: url("1.jpg");
+        transition: 0.5s;
+    }
+    #box{
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+</head>
+<body>
+    <h1 id="h"></h1>
+    <script>
+        var a = document.createElement('a');//创建一个标签
+        var h = document.getElementById('h');//找到要放的父元素
+        h.appendChild(a);//放入
+        var p =document.createElement('p');
+        document.body.appendChild(p);
+        var span = document.createElement('span');
+        document.getElementsByTagName('p')[0].appendChild(span);
+        var ul = document.createElement('ul');
+        document.body.appendChild(ul);
+        // var li = document.createElement('li');
+        // document.getElementsByTagName('ul')[0].appendChild(li);
+        for(var i=0;i<10;i++){
+            var li = document.createElement('li');
+            ul.appendChild(li);
+            li.innerHTML='<li></li>'+i;
+        }
+        var tab = document.createElement('table');
+        document.body.appendChild(tab);
+        for(var q=0;q<2;q++){
+            var tr = document.createElement('tr');
+            tab.appendChild(tr);
+            for(var e=0;e<3;e++){
+                var td = document.createElement('td');
+                tr.appendChild(td);
+            }
+        }
+        var g = document.getElementsByTagName('td');
+        for(var t=0;t<6;t++){
+            g[t].innerHTML='<td>看看效果</td>'+t;
+        }
+        var div = document.createElement('div');
+        document.body.appendChild(div);
+        var div2 = document.getElementsByTagName('div');
+        div2[0].setAttribute('id','box');
+        var box = document.getElementById('box');
+        for(var p=1;p<11;p++){
+            // var div3 = document.createElement('div');
+            // box.appendChild(div3);
+            for(var v= 1;v<11;v++){
+                var div4 = document.createElement('div');
+                box.appendChild(div4);
+                div4.style.top = p * 50 +'px';
+                div4.style.left = v * 50 +'px';
+                div.style.backgroundPositionX = p * -50 +'px';
+                div.style.backgroundPositionY = v * -50 +'px';
+                div.onmousemove=function(){
+                    this.style.opacity = 1;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

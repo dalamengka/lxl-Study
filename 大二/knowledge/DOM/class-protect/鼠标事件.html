@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <script>
+        var mydiv = document.getElementById('mydiv');
+        mydiv.style.width='200px';
+        mydiv.style.height='200px';
+        mydiv.style.backgroundColor='deepskyblue';
+        mydiv.style.color='white';
+        // 单机事件:onclick
+        mydiv.onclick=function(){
+            alert('点我干嘛?');
+        }
+        //双击事件:ondblclick
+        // mydiv.ondblclick=function(){
+        //     alert('双击我干嘛?');
+        // }
+        //鼠标按下事件:onmousedown
+        mydiv.onmousedown=function(){
+            this.innerHTML='按我干嘛?';
+        }
+        //鼠标抬起事件:onmouseup
+        mydiv.onmouseup=function(){
+            mydiv.innerHTML='';
+        }
+        //鼠标移动:onmousemove
+        mydiv.onmousemove=function(){
+            console.log('指我干嘛');
+        }
+        //鼠标移入:onmouseover
+        mydiv.onmouseover=function(){
+            // mydiv.innerHTML='进来了';
+            this.style.display='none';
+        }
+        //鼠标移出:onmouseleave
+        mydiv.onmouseleave=function(){
+            // mydiv.innerHTML='';
+            this.style.display='block';
+        }
+        //会触发多个,按嵌套处理:onmouseout
+        //不会进行多次触发:onmouseenter
+    </script>
+</body>
+</html>
